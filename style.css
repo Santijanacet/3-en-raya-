@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    display: grid;
+    place-items: center;
+    font-family: 'Tilt Warp', cursive;
+}
+
+h1 {
+    margin: 50px 0 50px 0;
+    font-size: 5rem;
+    color: rgb(32, 183, 93);
+    -webkit-text-stroke: .5px rgb(34, 255, 0);
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 30px;
+}
+
+#cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn {
+
+    font-size: 2rem;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 0;
+    background: none;
+   border: 2px solid #fff;
+   overflow: hidden;
+   transition: all 0.3s;
+   border-radius: 12px;
+   background-color: rgb(34, 255, 0);
+   font-weight: bold;
+   box-shadow: 0 2px 0 2px #000;
+
+
+}
+
+
+.btn::before{
+    content: "";
+    background-color: #ff6700;
+}
+
+#find {
+    padding: 7px;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: rgb(34, 255, 0);
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px rgba(76, 201, 240, 0.5);
+    overflow: hidden;
+    position: relative; 
+    transition: all 0.3s;
+}
+
+#find::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 120%;
+    background-color: #EA4878;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+}
+
+
+#find:hover {
+    background-color: #4cc9f0;
+    color: white;
+    box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+#find:hover::before{
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+}
+
+#find:active{
+    transform: scale(0.9);
+}
+
+.btn:hover {
+    background-color: rgb(233, 175, 175);
+}
+
+
+p {
+    font-size: 2rem;
+}
+
+input[type="text"] {
+    padding: 10px 20px;
+    width: 300px;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Animación y efectos al enfocar */
+input[type="text"]:focus {
+    border-color:rgb(34, 255, 0);
+    box-shadow: 0 4px 6px rgba(76, 201, 240, 0.5);
+}
+
+/* Efecto al escribir */
+input[type="text"]:valid {
+    border-color: rgb(34, 255, 0);
+    box-shadow: 0 4px 6px rgba(0, 170, 255, 0.5);
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+input[type="text"]:focus::placeholder {
+    color: rgb(34, 255, 0);
+}
+
+/* Animación de error */
+input[type="text"]:invalid {
+    border-color: #ff6b6b;
+    box-shadow: 0 4px 6px rgba(255, 107, 107, 0.5);
+}
+
+input[type="text"]:invalid:focus {
+    border-color: #ff4757;
+    box-shadow: 0 4px 6px rgba(255, 71, 87, 0.5);
+}
+
+/* Animación al hacer hover */
+input[type="text"]:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
